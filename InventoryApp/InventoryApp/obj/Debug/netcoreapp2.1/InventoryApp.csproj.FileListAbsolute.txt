@@ -1,0 +1,4 @@
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.1\InventoryApp.csprojAssemblyReference.cache
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.1\InventoryApp.csproj.CoreCompileInputs.cache
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.1\InventoryApp.AssemblyInfoInputs.cache
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.1\InventoryApp.AssemblyInfo.cs
