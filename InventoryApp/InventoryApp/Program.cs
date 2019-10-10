@@ -4,19 +4,23 @@ namespace InventoryApp
 {
     class Program
     {
+        private const decimal keystone = 1.4M;
+
         static void Main(string[] args)
         {
             var element = new Element
             {
-                Material = "Material",
+                Material = TypeOfMaterials.Stone,
                 Weight = 123,
                 WSPrice = 123.45M,
-                Location = "location",
+                Location = LocationID.Stock,
             };
-            element.WSWeightValue();
+            element.MakeRetail(keystone);
 
-            Console.WriteLine($"InventoryNo:  {element.InventoryNumber}," 
-                $"Material: { element.Material}," +
-                $"  Grams: { element.Weight}" );
+            Console.WriteLine($"Inventory Number :  {element.InventoryNumber}, "+
+                $"Material : { element.Material}, " +
+                $"Date Aquired : { element.DateAcquired}, " +
+                $"Grams : { element.Weight}");
         }
+    }
 }
