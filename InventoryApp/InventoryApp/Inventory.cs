@@ -1,31 +1,39 @@
-﻿using System;
+﻿using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace InventoryApp
 {
-    class Inventory
+    static class Inventory
     {
-        public Element CreateElement(
+        public static Element CreateElement(
             TypeOfMaterials materialType,
             LocationID location,
             int weight,
             decimal wsPrice,
-            decimal retailPrice);
-           
+            decimal retailPrice)
 
-           var element = new Element
-           {
-               Weight = weight,
-               Material = materialType,
 
-           };
 
-            if(retailPrice > 0 )
+        {
+            var element = new Element
             {
-            element.MakeRetail(retailPrice)
-            }
-        return element;
-            }
-    }
+                Weight = weight,
+                Material = materialType,
 
+            };
+
+            if (retailPrice > 0)
+            {
+                element.MakeRetail(retailPrice);
+            }
+        }
+
+    
+            return element;
+
+        {
+        }
+    }
+}

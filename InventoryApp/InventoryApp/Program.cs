@@ -8,14 +8,8 @@ namespace InventoryApp
 
         static void Main(string[] args)
         {
-            var element = new Element
-            {
-                Material = TypeOfMaterials.Stone,
-                Weight = 123,
-                WSPrice = 123.45M,
-                Location = LocationID.Stock,
-            };
-            element.MakeRetail(keystone);
+
+            var element = Inventory.CreateElement(TypeOfMaterials.Sterling, LocationID.Stock, 25, 20M, 50M);
 
             Console.WriteLine($"Inventory Number :  {element.InventoryNumber}, "+
                 $"Material : { element.Material}, " +
