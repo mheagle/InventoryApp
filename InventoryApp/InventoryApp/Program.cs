@@ -8,13 +8,36 @@ namespace InventoryApp
 
         static void Main(string[] args)
         {
+            Console.WriteLine("*Welcome to the Inventory, Please select an option:*");
 
-            var element = Inventory.CreateElement(TypeOfMaterials.Sterling, LocationID.Stock, 25, 20M, 50M);
+            while (true)
+            {
+                Console.WriteLine("0. Exit");
+                Console.WriteLine("1. Enter New Item");
+                Console.WriteLine("2. Calculate Retail Price");
+                Console.WriteLine("3. List All Available Inventory");
+                Console.WriteLine("4. List All Sold Inventory");
 
-            Console.WriteLine($"Inventory Number :  {element.InventoryNumber}, "+
-                $"Material : { element.Material}, " +
-                $"Date Aquired : { element.DateAcquired}, " +
-                $"Grams : { element.Weight}");
+                var option = Console.ReadLine();
+                switch(option)
+                {
+
+                case "0":
+			    Console.WriteLine("Thank you for visiting the Inventory");
+                    return;
+			    case "1":
+			    break;
+			    case "2":
+			    break;
+			    case "3":
+			    break;
+			    case "4":
+			    break;
+                default:
+			Console.WriteLine("Please select a valid option from the menu");
+                break;
+            }
         }
     }
+}
 }
