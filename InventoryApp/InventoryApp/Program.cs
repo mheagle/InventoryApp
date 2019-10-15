@@ -26,7 +26,24 @@ namespace InventoryApp
 			    Console.WriteLine("Thank you for visiting the Inventory");
                     return;
 			    case "1":
-			    break;
+                        Console.WriteLine("Material Type:  ");
+                        //Convert enum to array
+                       var materialTypes = Enum.GetNames(typeof(TypeOfMaterials));
+                        //Loop through the array and print out
+                        for (var i = 0; i < materialTypes.Length; i++)
+                        {
+                            Console.WriteLine($"{i}. {materialTypes[i]}");
+                        }
+                        var materialType = Enum.Parse<TypeOfMaterials>(Console.ReadLine());
+
+                        Console.Write("Enter weight in grams: ");
+                        var gramweight = Convert.ToInt32(Console.ReadLine());
+
+                        Console.Write("Enter wholesale price: ");
+                        var wholesale = Convert.ToDecimal(Console.ReadLine());
+
+                        break;
+
 			    case "2":
 			    break;
 			    case "3":

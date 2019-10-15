@@ -20,6 +20,7 @@ namespace InventoryApp
             {
                 Weight = weight,
                 Material = materialType,
+             
             };
 
 
