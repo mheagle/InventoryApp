@@ -70,6 +70,8 @@ namespace InventoryApp
         /// </summary>
         public LocationID Location { get; set; }
 
+        public string SoldStatus { get; private set; }
+
 
         #endregion
 
@@ -90,7 +92,7 @@ namespace InventoryApp
         /// </summary>
         /// <param name="markup">Price markup for retail</param>
         public void MakeRetail(decimal markup)
-
+    
         {
             RPrice = WSPrice * markup;
         }
