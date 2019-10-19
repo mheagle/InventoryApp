@@ -1,12 +1,14 @@
 ﻿using iTextSharp.text;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace InventoryApp
 {
     static class Inventory
     {
+        private static List<Element> elements = new List<Element>();
         public static Element CreateElement(
             TypeOfMaterials materialType,
             LocationID location,
@@ -20,7 +22,7 @@ namespace InventoryApp
             {
                 Weight = weight,
                 Material = materialType,
-             
+
             };
 
 
@@ -28,10 +30,10 @@ namespace InventoryApp
             {
                 element.MakeRetail(retailPrice);
             }
-
+            elements.Add(element);
             return element;
 
         }
 
-    }
+}
 }

@@ -36,17 +36,31 @@ namespace InventoryApp
                         }
                         var materialType = Enum.Parse<TypeOfMaterials>(Console.ReadLine());
 
+                        Console.WriteLine("Location ID: ");
+                        //convert enum to array
+                        var location = Enum.GetNames(typeof(LocationID));
+                        //loop through the array and print out
+                        for (var a = 0; a < location.Length; a++)
+                        {
+                            Console.WriteLine($"{a}. {location[a]}");
+                        }
+                        var locations = Enum.Parse<LocationID>(Console.ReadLine());
+
                         Console.Write("Enter weight in grams: ");
                         var gramweight = Convert.ToInt32(Console.ReadLine());
 
                         Console.Write("Enter wholesale price: ");
                         var wholesale = Convert.ToDecimal(Console.ReadLine());
 
+
+                        var element = Inventory.CreateElement(materialTypes, location, gramweight, wholesale, retailPrice);
+
+                        Console.WriteLine($"Inventory Number : {element.InventoryNumber}, Material: { element.Material}, Location: {element.Location}, Date Acquired: {element.DateAcquired}, Grams: {element.Weight}, Wholesale Price: {element.WSPrice:C}, Retail Price: {element.RPrice:C}");
                         break;
 
 			    case "2":
 			    break;
-			    case "3":
+                case "3":
 			    break;
 			    case "4":
 			    break;
