@@ -4,7 +4,7 @@ namespace InventoryApp
 {
     class Program
     {
-        private const decimal keystone = 1.4M;
+     
 
         static void Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace InventoryApp
                         var materialType = Enum.Parse<TypeOfMaterials>(Console.ReadLine());
 
                         Console.WriteLine("Location ID: ");
-                        //convert enum to array
+                        //convert enum for locations to array
                         var location = Enum.GetNames(typeof(LocationID));
                         //loop through the array and print out
                         for (var a = 0; a < location.Length; a++)
@@ -52,10 +52,12 @@ namespace InventoryApp
                         Console.Write("Enter wholesale price: ");
                         var wholesale = Convert.ToDecimal(Console.ReadLine());
 
+                        Console.Write("Enter Mark Up: ");
+                        var markup = Convert.ToDecimal(Console.ReadLine());
 
-                        var element = Inventory.CreateElement(materialTypes, location, gramweight, wholesale, retailPrice);
+                        var element = Inventory.CreateElement(materialType, locations, gramweight, wholesale, markup);
 
-                        Console.WriteLine($"Inventory Number : {element.InventoryNumber}, Material: { element.Material}, Location: {element.Location}, Date Acquired: {element.DateAcquired}, Grams: {element.Weight}, Wholesale Price: {element.WSPrice:C}, Retail Price: {element.RPrice:C}");
+                        Console.WriteLine($"Inventory Number : {element.InventoryNumber}, Material: { element.Material}, Location: {element.Location}, Date Acquired: {element.DateAcquired}, Grams: {element.Weight},  Retail Price: {element.RPrice:C}");
                         break;
 
 			    case "2":
