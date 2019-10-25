@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace InventoryApp
 {
@@ -64,8 +65,30 @@ namespace InventoryApp
 			    break;
                 case "3":
 			    break;
-			    case "4":
-			    break;
+                case "4":
+                        Console.Write("List Inventory by Location Category:  ");
+
+                        //convert enum for locations to array
+                        var category = Enum.GetNames(typeof(LocationID));
+
+                        //loop through the array and print out
+                        for (var a = 0; a < category.Length; a++)
+
+                        {
+                            Console.WriteLine($"{a}. {category[a]}");
+                        }
+
+                        var locationcategory = Enum.Parse<LocationID>(Console.ReadLine());
+
+                        var locationchoice = 
+                            Inventory.GetAllElementsbyLocation(locationcategory);
+                        _ = locationchoice.GetEnumerator();
+
+                        foreach (var myelement in locationchoice)
+                        {
+                            Console.WriteLine($"Inventory Number : {myelement.InventoryNumber}, Material: { myelement.Material}, Location: {myelement.Location}, Date Acquired: {myelement.DateAcquired}, Grams: {myelement.Weight},  Retail Price: {myelement.RPrice:C}");
+                        }
+                        break;
                 default:
 			Console.WriteLine("Please select a valid option from the menu");
                 break;
