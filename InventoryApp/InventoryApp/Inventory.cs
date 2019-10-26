@@ -11,6 +11,7 @@ namespace InventoryApp
     ///creates a new piece of invetory using the classes listed in element class
     {
         private static List<Element> elements = new List<Element>();
+        private static List<Assembly> assemblies = new List<Assembly>();
         public static Element CreateElement(
             TypeOfMaterials materialType,
             LocationID location,
@@ -65,7 +66,15 @@ namespace InventoryApp
                 return;
             }
             element.WeightValue(weight, wsprice);
-         }
+
+            var assembly = new Assembly
+            {
+                WorkCompleted = DateTime.Now,
+                AssemblyType = TypeOfAssembly.KeumBoo,
+                InventoryNumber = element.InventoryNumber,
+            };
+            assemblies.Add(assembly);
+        }
     }
 }
 
