@@ -98,8 +98,15 @@ namespace InventoryApp
         {
             RPrice = markup * wsprice;
         }
-
-
+        /// <summary>
+        /// Calculate weight value as price per single unit of weight
+        /// </summary>
+        /// <param name="weight">weight of element</param>
+        /// <param name="wsprice">wholesale price</param>
+        public void WeightValue(int weight, decimal wsprice)
+        {
+            WValue = weight / wsprice;
+        }
         #endregion
     }
 }

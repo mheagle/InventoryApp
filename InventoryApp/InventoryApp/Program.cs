@@ -15,9 +15,8 @@ namespace InventoryApp
             {
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Enter New Item");
-                Console.WriteLine("2. Calculate Retail Price");
-                Console.WriteLine("3. List All Available Inventory");
-                Console.WriteLine("4. List All Sold Inventory");
+                Console.WriteLine("2. Calculate Weight Value");
+                Console.WriteLine("3. List Inventory by Location Category");
 
                 var option = Console.ReadLine();
                 switch(option)
@@ -62,10 +61,16 @@ namespace InventoryApp
                         break;
 
 			    case "2":
+                        Console.Write("Inventory Number: ");
+                        var inventoryNumber = Convert.ToInt32(Console.ReadLine());
+                        gramweight = Convert.ToInt32(Console.ReadLine());
+                        wholesale = Convert.ToDecimal(Console.ReadLine());
+                        Inventory.WeightValue(inventoryNumber, gramweight, wholesale);
+
+                        Console.WriteLine("Weight Value calculation is complete.");
+
 			    break;
                 case "3":
-			    break;
-                case "4":
                         Console.Write("List Inventory by Location Category:  ");
 
                         //convert enum for locations to array

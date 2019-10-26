@@ -48,7 +48,24 @@ namespace InventoryApp
         {
             return elements.Where(a => a.Location == location);
         }
+        /// <summary>
+        /// find weight value of a single element based on inventory number
+        /// </summary>
+        /// <param name="inventorynumber">inventory number</param>
+        /// <param name="weight">weight</param>
+        /// <param name="wsprice">wholesale price</param>
+        public static void WeightValue(int inventorynumber, int weight, decimal wsprice)
+        {
+            var element =
+            elements.SingleOrDefault(a => a.InventoryNumber == inventorynumber);
 
+            if (element == null)
+            {
+                ///throw exception
+                return;
+            }
+            element.WeightValue(weight, wsprice);
+         }
     }
 }
 
