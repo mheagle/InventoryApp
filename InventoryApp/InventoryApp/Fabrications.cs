@@ -4,7 +4,9 @@ using System.Text;
 
 namespace InventoryApp
 {
-    enum TypeOfAssembly
+    #region Properties
+
+    enum TypeOfFabrication
     {
     ColdJoin,
     Solder,
@@ -16,34 +18,44 @@ namespace InventoryApp
     Forge,
     Cast
     }
-    class Assembly
-    {/// <summary>
-    /// assembly rate charge per hour
-    /// </summary>
-        public int Rate { get; set; }
+    class Fabrication
+    {
         /// <summary>
-        /// amount of time spent assembling piece in hours
+        /// description of fabrication process
         /// </summary>
-        public int Worktime { get; set; }
+        public string Description { get; set; }
+
         /// <summary>
         /// ID number of job
         /// </summary>
         public int JobID { get; set; }
+
+        /// <summary>
+        /// amount of labor charges
+        /// </summary>
+        public decimal LaborAmount { get; set; }
+
+        /// <summary>
+        /// retail price afer fabrication labor charges added
+        /// </summary>
+        public decimal RetailAfter { get; set; }
+
         /// <summary>
         /// date work completed and entered into inventory
         /// </summary>
         public DateTime WorkCompleted { get; set; }
         /// <summary>
-        /// Variety of Assembly types
+        /// List of fabrication types
         /// </summary>
-        public TypeOfAssembly AssemblyType { get; set; }
-        /// <summary>
-        /// Weight value after assembly
-        /// </summary>
-        public decimal WeightValue { get; set; }
+        public TypeOfFabrication FabricationType { get; set; }
+
         /// <summary>
         /// Foreign key to Element Inventory Number
         /// </summary>
         public int InventoryNumber { get; set; }
+
+        #endregion
+
+
     }
 }

@@ -15,8 +15,9 @@ namespace InventoryApp
             {
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Enter New Item");
-                Console.WriteLine("2. Calculate Weight Value");
+                Console.WriteLine("2. Add Fabrication Charges");
                 Console.WriteLine("3. List Inventory by Location Category");
+                
 
                 var option = Console.ReadLine();
                 switch(option)
@@ -47,7 +48,7 @@ namespace InventoryApp
                         var locations = Enum.Parse<LocationID>(Console.ReadLine());
 
                         Console.Write("Enter weight in grams: ");
-                        var gramweight = Convert.ToInt32(Console.ReadLine());
+                        var gramweight = Convert.ToDecimal(Console.ReadLine());
 
                         Console.Write("Enter wholesale price: ");
                         var wholesale = Convert.ToDecimal(Console.ReadLine());
@@ -55,21 +56,60 @@ namespace InventoryApp
                         Console.Write("Enter Mark Up: ");
                         var markup = Convert.ToDecimal(Console.ReadLine());
 
-                        var element = Inventory.CreateElement(materialType, locations, gramweight, wholesale, markup);
+
+                        Console.Write("Enter 1 if there labor charges on this listing ");
+                        int response = Convert.ToInt32(Console.ReadLine());
+ 
+
+                        Console.Write("Enter hourly rate for fabrication: ");
+                        var rate = Convert.ToDecimal(Console.ReadLine());
+
+                        Console.Write("Enter time spent on fabrication and assembly: ");
+                        var worktime = Convert.ToDecimal(Console.ReadLine());
+
+                        var element = Inventory.CreateElement(materialType, locations, gramweight, wholesale, markup, rate, worktime);
 
                         Console.WriteLine($"Inventory Number : {element.InventoryNumber}, Material: { element.Material}, Location: {element.Location}, Date Acquired: {element.DateAcquired}, Grams: {element.Weight},  Retail Price: {element.RPrice:C}");
                         break;
 
-			    case "2":
-                        Console.Write("Inventory Number: ");
-                        var inventoryNumber = Convert.ToInt32(Console.ReadLine());
-                        gramweight = Convert.ToInt32(Console.ReadLine());
-                        wholesale = Convert.ToDecimal(Console.ReadLine());
-                        Inventory.WeightValue(inventoryNumber, gramweight, wholesale);
+                  case "2":
+                        while (true)
+                        {
+                            Console.WriteLine("0. Exit, No labor charges");
+                            Console.WriteLine("1. Enter Labor Charges");
 
-                        Console.WriteLine("Weight Value calculation is complete.");
 
-			    break;
+                            var option2 = Console.ReadLine();
+                            switch (option2)
+                            {
+                                case "0":
+                                    Console.WriteLine("No labor charges incurred, return to main menu");
+                                    return;
+
+                                case "1":
+                                    Console.Write("Enter hourly rate for fabrication: ");
+                                    rate = Convert.ToDecimal(Console.ReadLine());
+
+                                    Console.Write("Enter time spent on fabrication and assembly: ");
+                                    worktime = Convert.ToDecimal(Console.ReadLine());
+
+                                    Console.Write("Inventory Number: ");
+                                    var inventoryNumber = Convert.ToInt32(Console.ReadLine());
+                                    rate = Convert.ToDecimal(Console.ReadLine());
+                                    worktime = Convert.ToDecimal(Console.ReadLine());
+                                    Inventory.LaborCharge(inventoryNumber, rate, worktime);
+                                    
+
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Please select a valid option from the menu");
+                                    break;
+                            }
+                        }
+
+                            
+                       
                 case "3":
                         Console.Write("List Inventory by Location Category:  ");
 

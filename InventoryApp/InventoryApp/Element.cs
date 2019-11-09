@@ -46,7 +46,7 @@ namespace InventoryApp
         /// <summary>
         /// Weight of the element in grams
         /// </summary>
-        public int Weight { get; set; }
+        public decimal Weight { get; set; }
 
         /// <summary>
         /// Retail price of item
@@ -72,7 +72,17 @@ namespace InventoryApp
         /// </summary>
         public LocationID Location { get; set; }
 
+        /// <summary>
+        /// labor rate charge per hour
+        /// </summary>
+        public decimal Rate { get; set; }
 
+        /// <summary>
+        /// amount of time spent assembling piece in hours
+        /// </summary>
+        public decimal Worktime { get; set; }
+
+        public decimal LaborCharge { get; private set; }
 
 
         #endregion
@@ -98,14 +108,27 @@ namespace InventoryApp
         {
             RPrice = markup * wsprice;
         }
+
         /// <summary>
         /// Calculate weight value as price per single unit of weight
         /// </summary>
         /// <param name="weight">weight of element</param>
         /// <param name="wsprice">wholesale price</param>
-        public void WeightValue(int weight, decimal wsprice)
+        public decimal WeightValue(decimal weight, decimal wsprice)
         {
             WValue = weight / wsprice;
+            return WValue;
+        }
+
+        ///<summary>
+        ///Fabrication Labor charges
+        ///</summary>
+        ///<parm name="rate">charge per hour
+        ///<parm name="worktime">time spent fabricating piece in hours
+        public decimal FabricationCharge(decimal rate, decimal worktime)
+        {
+            LaborCharge = rate * worktime;
+            return LaborCharge;
         }
         #endregion
     }

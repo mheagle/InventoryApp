@@ -11,13 +11,16 @@ namespace InventoryApp
     ///creates a new piece of invetory using the classes listed in element class
     {
         private static List<Element> elements = new List<Element>();
-        private static List<Assembly> assemblies = new List<Assembly>();
+        private static List<Fabrication> fabrications = new List<Fabrication>();
         public static Element CreateElement(
             TypeOfMaterials materialType,
             LocationID location,
-            int weight,
+            decimal weight,
             decimal markup,
-            decimal wsprice)
+            decimal wsprice,
+            decimal rate,
+            decimal worktime
+            )
 
         {
             var element = new Element
@@ -26,6 +29,8 @@ namespace InventoryApp
                 Material = materialType,
                 Location = location,
                 Weight = weight,
+                Rate = rate,
+                Worktime = worktime
             };
 
             ///attach retail price to element
@@ -50,12 +55,11 @@ namespace InventoryApp
             return elements.Where(a => a.Location == location);
         }
         /// <summary>
-        /// find weight value of a single element based on inventory number
+        /// add labor charge to a single element based on inventory number
         /// </summary>
         /// <param name="inventorynumber">inventory number</param>
-        /// <param name="weight">weight</param>
-        /// <param name="wsprice">wholesale price</param>
-        public static void WeightValue(int inventorynumber, int weight, decimal wsprice)
+        /// <param name="laborcharge">labor charge</param>
+        public static decimal LaborCharge(int inventorynumber, decimal rate, decimal worktime)
         {
             var element =
             elements.SingleOrDefault(a => a.InventoryNumber == inventorynumber);
@@ -63,17 +67,21 @@ namespace InventoryApp
             if (element == null)
             {
                 ///throw exception
-                return;
+                return 0;
             }
-            element.WeightValue(weight, wsprice);
+            element.FabricationCharge(rate, worktime);
+            
 
-            var assembly = new Assembly
+            var fabrication = new Fabrication
             {
                 WorkCompleted = DateTime.Now,
-                AssemblyType = TypeOfAssembly.KeumBoo,
+                Description = "Keum Boo",
+                FabricationType = TypeOfFabrication.KeumBoo,
                 InventoryNumber = element.InventoryNumber,
+
+
             };
-            assemblies.Add(assembly);
+            fabrications.Add(fabrication);
         }
     }
 }
