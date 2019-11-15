@@ -59,7 +59,7 @@ namespace InventoryApp
         /// </summary>
         /// <param name="inventorynumber">inventory number</param>
         /// <param name="laborcharge">labor charge</param>
-        public static decimal LaborCharge(int inventorynumber, decimal rate, decimal worktime)
+        public static void LaborCharge(int inventorynumber, decimal rate, decimal worktime)
         {
             var element =
             elements.SingleOrDefault(a => a.InventoryNumber == inventorynumber);
@@ -67,7 +67,7 @@ namespace InventoryApp
             if (element == null)
             {
                 ///throw exception
-                return 0;
+                return;
             }
             element.FabricationCharge(rate, worktime);
             
@@ -78,8 +78,7 @@ namespace InventoryApp
                 Description = "Keum Boo",
                 FabricationType = TypeOfFabrication.KeumBoo,
                 InventoryNumber = element.InventoryNumber,
-
-
+                RetailAfter =+ element.RPrice,
             };
             fabrications.Add(fabrication);
         }

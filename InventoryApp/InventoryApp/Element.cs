@@ -82,6 +82,9 @@ namespace InventoryApp
         /// </summary>
         public decimal Worktime { get; set; }
 
+        /// <summary>
+        /// amount charged for assembly labor
+        /// </summary>
         public decimal LaborCharge { get; private set; }
 
 
@@ -126,6 +129,7 @@ namespace InventoryApp
         ///<parm name="rate">charge per hour
         ///<parm name="worktime">time spent fabricating piece in hours
         public decimal FabricationCharge(decimal rate, decimal worktime)
+         
         {
             LaborCharge = rate * worktime;
             return LaborCharge;
