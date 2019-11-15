@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace InventoryApp
+namespace Inventoryapp
 {
     #region Properties
 
     enum TypeOfFabrication
     {
-    ColdJoin,
-    Solder,
-    Texture,
-    Setting,
-    KeumBoo,
-    Patina,
-    Wirework,
-    Forge,
-    Cast
+        ColdWork,
+        Solder,
+        KeumBoo
     }
+
     class Fabrication
+
     {
         /// <summary>
-        /// description of fabrication process
+        /// description of fabrication process used
         /// </summary>
         public string Description { get; set; }
 
@@ -31,28 +27,25 @@ namespace InventoryApp
         public int JobID { get; set; }
 
         /// <summary>
-        /// amount of labor charges
-        /// </summary>
-        public decimal LaborAmount { get; set; }
-
-        /// <summary>
-        /// retail price afer fabrication labor charges added
-        /// </summary>
-        public decimal RetailAfter { get; set; }
-
-        /// <summary>
         /// date work completed and entered into inventory
         /// </summary>
         public DateTime WorkCompleted { get; set; }
+
         /// <summary>
-        /// List of fabrication types
+        /// Type of Fabrication
         /// </summary>
         public TypeOfFabrication FabricationType { get; set; }
+
+        /// <summary>
+        /// Retail price
+        /// </summary>
+        public decimal Retail { get;  set; }
 
         /// <summary>
         /// Foreign key to Element Inventory Number
         /// </summary>
         public int InventoryNumber { get; set; }
+
 
         #endregion
 
