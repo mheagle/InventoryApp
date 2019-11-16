@@ -46,6 +46,8 @@ namespace Inventoryapp
         /// </summary>
         public int InventoryNumber { get; set; }
 
+        public virtual Element Element { get; set; }
+
 
         #endregion
 
