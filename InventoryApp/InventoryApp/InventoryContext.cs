@@ -18,8 +18,6 @@ namespace InventoryApp
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inventory2019;Integrated Security=True;Connect Timeout=30;");
-
-
        }
 
 
@@ -41,6 +39,9 @@ namespace InventoryApp
                 entity.Property(a => a.Location)
                  .IsRequired();
 
+                entity.Property(a => a.Wholesale)
+                 .IsRequired();
+
                 entity.ToTable("Elements"); ;
 
             });
@@ -56,6 +57,8 @@ namespace InventoryApp
                 entity.Property(t => t.Retail)
                  .IsRequired();
 
+                entity.Property(t => t.FabricationType)
+                .IsRequired();
 
                 entity.HasOne(t => t.Element)
                 .WithMany()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace Inventoryapp
     static class Inventory
     {
 
-        private static List<Element> elements = new List<Element>();
-        private static List<Fabrication> fabrications = new List<Fabrication>();
+        private static InventoryContext db = new InventoryContext();
+
         private static decimal markup = 1.5M;
         private static decimal rate = 65;
 
@@ -23,7 +24,7 @@ namespace Inventoryapp
         /// 
 
         public static Element CreateElement(string description,
-            LocationID locationID, decimal wsprice, decimal worktime)
+            LocationID locationID, decimal wsprice, decimal worktime=0)
         {
             var element = new Element
             {
@@ -35,7 +36,8 @@ namespace Inventoryapp
             {
                 element.MakeRetail(markup, wsprice);
             }
-            elements.Add(element);
+            db.Elements.Add(element);
+            db.SaveChanges();
             return element;
         }
 
@@ -46,7 +48,18 @@ namespace Inventoryapp
         /// <returns></returns>
         public static IEnumerable<Element> GetAllElementsByDescription(string description)
         {
-            return elements.Where(a => a.Description == description);
+            return db.Elements.Where(a => a.Description == description);
+        }
+
+        /// <summary>
+        /// for the variable 'a' return all elements where a's description matches user description
+        /// </summary>
+        /// <param name="description"></param>
+        /// <returns></returns>
+        public static IEnumerable<Fabrication> GetAllFabricationsByInventoryNumber(int inventoryNumber)
+        {
+            return db.Fabrications.Where(a => a.InventoryNumber == inventoryNumber)
+            .OrderByDescending(a => a.WorkCompleted);
         }
 
         /// <summary>
@@ -57,7 +70,7 @@ namespace Inventoryapp
         public static IEnumerable<Element>
             GetAllElementsbyLocation(LocationID location)
         {
-            return elements.Where(a => a.Location == location);
+            return db.Elements.Where(a => a.Location == location);
         }
 
         /// <summary>
@@ -68,7 +81,7 @@ namespace Inventoryapp
         public static void KeumBooWork(int inventoryNumber, decimal worktime)
         {
             var element =
-                  elements.SingleOrDefault(
+                  db.Elements.SingleOrDefault(
                       a => a.InventoryNumber == inventoryNumber);
             if (element == null)
             {
@@ -85,8 +98,8 @@ namespace Inventoryapp
                 InventoryNumber = element.InventoryNumber,
                 Retail = element.Retail
             };
-            fabrications.Add(fabrication);
-
+            db.Fabrications.Add(fabrication);
+            db.SaveChanges();
         }
 
         /// <summary>
@@ -97,7 +110,7 @@ namespace Inventoryapp
         public static void ColdWork(int inventoryNumber, decimal worktime)
         {
             var element =
-                  elements.SingleOrDefault(
+                  db.Elements.SingleOrDefault(
                       a => a.InventoryNumber == inventoryNumber);
             if (element == null)
             {
@@ -114,18 +127,19 @@ namespace Inventoryapp
                 InventoryNumber = element.InventoryNumber,
                 Retail = element.Retail
             };
-            fabrications.Add(fabrication);
+            db.Fabrications.Add(fabrication);
+            db.SaveChanges();
         }
 
-            /// <summary>
-            /// go through list of elements and locate one element that matches the inventory number
-            /// </summary>
-            /// <param name="inventoryNumber">User input inventory number</param>
-            /// <param name="labor">amount of labor to add for Solder work</param>
-            public static void SolderWork(int inventoryNumber, decimal worktime)
+        /// <summary>
+        /// go through list of elements and locate one element that matches the inventory number
+        /// </summary>
+        /// <param name="inventoryNumber">User input inventory number</param>
+        /// <param name="labor">amount of labor to add for Solder work</param>
+        public static void SolderWork(int inventoryNumber, decimal worktime)
             {
                 var element =
-                      elements.SingleOrDefault(
+                      db.Elements.SingleOrDefault(
                           a => a.InventoryNumber == inventoryNumber);
                 if (element == null)
                 {
@@ -142,10 +156,10 @@ namespace Inventoryapp
                     InventoryNumber = element.InventoryNumber,
                     Retail = element.Retail
                 };
-                fabrications.Add(fabrication);
+                db.Fabrications.Add(fabrication);
+                db.SaveChanges();
 
-
-             }
+        }
 
     }
 }

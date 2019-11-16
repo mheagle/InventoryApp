@@ -14,10 +14,11 @@ namespace Inventoryapp
                 Console.WriteLine("O. Exit");
                 Console.WriteLine("1. Enter a piece of inventory");
                 Console.WriteLine("2. Add Keum Boo work charges");
-                Console.WriteLine("3. Add solder charges");
+                Console.WriteLine("3. Add soldering charges");
                 Console.WriteLine("4. Add cold-working charges");
                 Console.WriteLine("5. List all inventory by location");
                 Console.WriteLine("6. List all inventory");
+                Console.WriteLine("7. List all inventory with fabrications");
 
                 var option = Console.ReadLine();
 
@@ -114,6 +115,18 @@ namespace Inventoryapp
 
                     case "6":
                         PrintAllInventory();
+                        break;
+
+                    case "7":
+                        PrintAllInventory();
+                        Console.Write("Inventory Number ");
+                        inventoryNumber = Convert.ToInt32(Console.ReadLine());
+                        var fabrications = Inventory.GetAllFabricationsByInventoryNumber(inventoryNumber);
+
+                        foreach (var fabrication in fabrications)
+                        {
+                            Console.WriteLine($"Job ID: {fabrication.JobID},Description: {fabrication.Description}, Type of Fabrication: {fabrication.FabricationType}, Work Completion Date: {fabrication.WorkCompleted}, Inventory Number: {fabrication.InventoryNumber}, Retail: {fabrication.Retail:C},");
+                        }
                         break;
 
                     default:
