@@ -31,8 +31,7 @@ namespace InventoryUI.Controllers
                 return NotFound();
             }
 
-            var element = await _context.Elements
-                .FirstOrDefaultAsync(m => m.InventoryNumber == id);
+            var element = Inventory.GetElementByInventoryNumber(id.Value);
             if (element == null)
             {
                 return NotFound();
