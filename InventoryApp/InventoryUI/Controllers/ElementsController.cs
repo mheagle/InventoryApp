@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using InventoryApp;
 using Inventoryapp;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryUI.Controllers
 {
+    [Authorize]
     public class ElementsController : Controller
     {
         private readonly InventoryContext _context = new InventoryContext();
@@ -18,7 +20,7 @@ namespace InventoryUI.Controllers
         // GET: Elements
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Elements.ToListAsync());
+            return View(Inventory.GetAllElementsByDescription(HttpContext.User.Identity.Name));
         }
 
         // GET: Elements/Details/5
@@ -50,12 +52,11 @@ namespace InventoryUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Description,InventoryNumber,Location,Wholesale,Retail,Worktime,Labor,DateAcquired")] Element element)
+        public async Task<IActionResult> Create([Bind("Description,Location,Wholesale,Worktime,Labor")] Element element)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(element);
-                await _context.SaveChangesAsync();
+                Inventory.CreateElement(element.Description, element.Location, element.Wholesale, element.Worktime);
                 return RedirectToAction(nameof(Index));
             }
             return View(element);

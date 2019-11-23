@@ -19,18 +19,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Location" class="control-label"></label>
-                <select asp-for="Location" class="form-control"></select>
+                <select asp-for="Location" class="form-control" asp-items="Html.GetEnumSelectList<LocationID>()"></select>
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Wholesale" class="control-label"></label>
                 <input asp-for="Wholesale" class="form-control" />
                 <span asp-validation-for="Wholesale" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Retail" class="control-label"></label>
-                <input asp-for="Retail" class="form-control" />
-                <span asp-validation-for="Retail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Worktime" class="control-label"></label>
@@ -41,11 +36,6 @@
                 <label asp-for="Labor" class="control-label"></label>
                 <input asp-for="Labor" class="form-control" />
                 <span asp-validation-for="Labor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateAcquired" class="control-label"></label>
-                <input asp-for="DateAcquired" class="form-control" />
-                <span asp-validation-for="DateAcquired" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

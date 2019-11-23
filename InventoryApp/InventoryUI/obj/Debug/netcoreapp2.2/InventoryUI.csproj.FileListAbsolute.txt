@@ -34,3 +34,8 @@ C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug
 C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\InventoryUI.csproj.CopyComplete
 C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\InventoryUI.dll
 C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\InventoryUI.pdb
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\Razor\Views\Elements\Create.cshtml.g.cs
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\Razor\Views\Elements\Delete.cshtml.g.cs
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\Razor\Views\Elements\Details.cshtml.g.cs
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\Razor\Views\Elements\Edit.cshtml.g.cs
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\obj\Debug\netcoreapp2.2\Razor\Views\Elements\Index.cshtml.g.cs

@@ -23,8 +23,13 @@ using InventoryUI.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\Views\_ViewImports.cshtml"
+using Inventoryapp;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c761c17ea3a8b7a77e630f579df97e1d0cff04f", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a2b82208bb8152133838f4f50f986f8df1c11462", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2eae1114bc849d0b55542229f345a90370e40285", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -92,7 +97,7 @@ using InventoryUI.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 886, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f15135", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f15295", async() => {
                 BeginContext(31, 121, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
                 EndContext();
@@ -107,12 +112,12 @@ using InventoryUI.Models;
                 WriteLiteral(" - InventoryUI</title>\r\n\r\n    ");
                 EndContext();
                 BeginContext(200, 136, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f16046", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f16206", async() => {
                     BeginContext(235, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(245, 71, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f16464", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f16624", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -148,12 +153,12 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(342, 507, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f18956", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f19116", async() => {
                     BeginContext(377, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(387, 442, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f19375", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f19535", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper>();
@@ -200,7 +205,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(855, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f23034", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f23194", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -234,12 +239,12 @@ using InventoryUI.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(913, 3112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f25165", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f25325", async() => {
                 BeginContext(919, 189, true);
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
                 EndContext();
                 BeginContext(1108, 90, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f25747", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f25907", async() => {
                     BeginContext(1185, 9, true);
                     WriteLiteral("Inventory");
                     EndContext();
@@ -272,7 +277,7 @@ using InventoryUI.Models;
                     ");
                 EndContext();
                 BeginContext(1637, 32, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f28183", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f28343", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -291,7 +296,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n                    <ul class=\"navbar-nav flex-grow-1\">\r\n                        <li class=\"nav-item\">\r\n                            ");
                 EndContext();
                 BeginContext(1803, 91, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f29660", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f29820", async() => {
                     BeginContext(1886, 4, true);
                     WriteLiteral("Home");
                     EndContext();
@@ -318,7 +323,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
                 EndContext();
                 BeginContext(2002, 96, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f31749", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f31909", async() => {
                     BeginContext(2087, 7, true);
                     WriteLiteral("Privacy");
                     EndContext();
@@ -345,7 +350,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
                 EndContext();
                 BeginContext(2206, 99, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f33841", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f34001", async() => {
                     BeginContext(2293, 8, true);
                     WriteLiteral("Elements");
                     EndContext();
@@ -372,7 +377,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    <div class=\"container\">\r\n        ");
                 EndContext();
                 BeginContext(2477, 40, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f36008", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f36168", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -401,7 +406,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n        </main>\r\n    </div>\r\n\r\n    <footer class=\"border-top footer text-muted\">\r\n        <div class=\"container\">\r\n            &copy; 2019 - InventoryUI - ");
                 EndContext();
                 BeginContext(2742, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f37940", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f38100", async() => {
                     BeginContext(2800, 7, true);
                     WriteLiteral("Privacy");
                     EndContext();
@@ -427,12 +432,12 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n        </div>\r\n    </footer>\r\n\r\n    ");
                 EndContext();
                 BeginContext(2850, 193, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f39875", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f40035", async() => {
                     BeginContext(2885, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(2895, 51, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f40295", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f40455", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -450,7 +455,7 @@ using InventoryUI.Models;
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(2956, 67, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f41629", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f41789", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -485,12 +490,12 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(3049, 849, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f44042", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f44202", async() => {
                     BeginContext(3084, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(3094, 340, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f44463", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f44623", async() => {
                         BeginContext(3415, 10, true);
                         WriteLiteral("\r\n        ");
                         EndContext();
@@ -518,7 +523,7 @@ using InventoryUI.Models;
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(3444, 434, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f46677", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f46837", async() => {
                         BeginContext(3859, 10, true);
                         WriteLiteral("\r\n        ");
                         EndContext();
@@ -563,7 +568,7 @@ using InventoryUI.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(3904, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f49970", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c761c17ea3a8b7a77e630f579df97e1d0cff04f50130", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

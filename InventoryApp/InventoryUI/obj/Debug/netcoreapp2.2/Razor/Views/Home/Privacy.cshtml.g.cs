@@ -23,8 +23,13 @@ using InventoryUI.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryUI\Views\_ViewImports.cshtml"
+using Inventoryapp;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a2b82208bb8152133838f4f50f986f8df1c11462", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2eae1114bc849d0b55542229f345a90370e40285", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
