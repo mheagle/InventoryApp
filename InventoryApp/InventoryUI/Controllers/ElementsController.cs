@@ -20,7 +20,7 @@ namespace InventoryUI.Controllers
         // GET: Elements
         public async Task<IActionResult> Index()
         {
-            return View(Inventory.GetAllElementsByDescription(HttpContext.User.Identity.Name));
+            return View(await _context.Elements.ToListAsync());
         }
 
         // GET: Elements/Details/5
@@ -70,7 +70,7 @@ namespace InventoryUI.Controllers
                 return NotFound();
             }
 
-            var element = await _context.Elements.FindAsync(id);
+            var element = Inventory.GetElementByInventoryNumber(id.Value);
             if (element == null)
             {
                 return NotFound();
@@ -83,7 +83,7 @@ namespace InventoryUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Description,InventoryNumber,Location,Wholesale,Retail,Worktime,Labor,DateAcquired")] Element element)
+        public async Task<IActionResult> Edit(int id, [Bind("Description,InventoryNumber,Location,Wholesale,Retail,Worktime,Labor")] Element element)
         {
             if (id != element.InventoryNumber)
             {
@@ -94,8 +94,7 @@ namespace InventoryUI.Controllers
             {
                 try
                 {
-                    _context.Update(element);
-                    await _context.SaveChangesAsync();
+                    Inventory.UpdateElement(element);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

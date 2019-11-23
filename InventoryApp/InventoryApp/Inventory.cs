@@ -24,7 +24,7 @@ namespace Inventoryapp
         /// 
 
         public static Element CreateElement(string description,
-            LocationID locationID, decimal wsprice, decimal worktime=0)
+            LocationID locationID, decimal wsprice, decimal worktime = 0)
         {
             var element = new Element
             {
@@ -39,6 +39,28 @@ namespace Inventoryapp
             db.Elements.Add(element);
             db.SaveChanges();
             return element;
+        }
+
+        /// <summary>
+        /// find inventory by inventory number
+        /// </summary>
+        /// <param name="inventoryNumber"></param>
+        /// <returns></returns>
+        public static Element GetElementByInventoryNumber(int inventoryNumber)
+        {
+            return db.Elements.Find(inventoryNumber);
+        }
+
+        public static void UpdateElement(Element updatedElement)
+        {
+            var oldElement = GetElementByInventoryNumber(updatedElement.InventoryNumber);
+            oldElement.Description = updatedElement.Description;
+            oldElement.Location = updatedElement.Location;
+            oldElement.Worktime = updatedElement.Worktime;
+            oldElement.Retail = updatedElement.Retail;
+            oldElement.Labor = updatedElement.Labor;
+
+            db.SaveChanges();
         }
 
         /// <summary>
