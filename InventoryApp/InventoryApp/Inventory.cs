@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Inventoryapp
 {
-    static class Inventory
+    public static class Inventory
     {
 
         private static InventoryContext db = new InventoryContext();

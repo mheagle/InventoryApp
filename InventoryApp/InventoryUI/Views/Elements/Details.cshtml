@@ -1,0 +1,60 @@
+﻿@model Inventoryapp.Element
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Element</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wholesale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wholesale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Retail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Retail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Worktime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Worktime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Labor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Labor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateAcquired)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateAcquired)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.InventoryNumber">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

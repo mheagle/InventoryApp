@@ -5,7 +5,7 @@ using System.Text;
 namespace Inventoryapp
 
 {
-    enum LocationID
+  public  enum LocationID
     {
         Stock,
         Retailer,
@@ -18,7 +18,7 @@ namespace Inventoryapp
     /// and track location of stock
     /// </summary>
 
-    class Element
+  public   class Element
     {
 
         /// <summary>

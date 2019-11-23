@@ -6,14 +6,14 @@ namespace Inventoryapp
 {
     #region Properties
 
-    enum TypeOfFabrication
+  public  enum TypeOfFabrication
     {
         ColdWork,
         Solder,
         KeumBoo
     }
 
-    class Fabrication
+   public  class Fabrication
 
     {
         /// <summary>

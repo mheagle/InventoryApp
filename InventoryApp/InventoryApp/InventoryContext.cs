@@ -7,7 +7,7 @@ using System.Text;
 
 namespace InventoryApp
 {
-    class InventoryContext : DbContext
+    public class InventoryContext : DbContext
     {
 
         public DbSet<Element> Elements { get; set; }

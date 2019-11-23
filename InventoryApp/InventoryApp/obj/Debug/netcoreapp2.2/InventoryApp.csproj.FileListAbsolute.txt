@@ -1,0 +1,10 @@
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\bin\Debug\netcoreapp2.2\InventoryApp.deps.json
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\bin\Debug\netcoreapp2.2\InventoryApp.runtimeconfig.json
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\bin\Debug\netcoreapp2.2\InventoryApp.runtimeconfig.dev.json
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\bin\Debug\netcoreapp2.2\InventoryApp.dll
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\bin\Debug\netcoreapp2.2\InventoryApp.pdb
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.2\InventoryApp.csprojAssemblyReference.cache
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.2\InventoryApp.AssemblyInfoInputs.cache
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.2\InventoryApp.AssemblyInfo.cs
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.2\InventoryApp.dll
+C:\Users\mheag\Desktop\C#\Github\InventoryApp\InventoryApp\InventoryApp\obj\Debug\netcoreapp2.2\InventoryApp.pdb

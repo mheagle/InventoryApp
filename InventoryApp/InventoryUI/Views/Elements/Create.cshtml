@@ -1,0 +1,63 @@
+﻿@model Inventoryapp.Element
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Element</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <select asp-for="Location" class="form-control"></select>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wholesale" class="control-label"></label>
+                <input asp-for="Wholesale" class="form-control" />
+                <span asp-validation-for="Wholesale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Retail" class="control-label"></label>
+                <input asp-for="Retail" class="form-control" />
+                <span asp-validation-for="Retail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Worktime" class="control-label"></label>
+                <input asp-for="Worktime" class="form-control" />
+                <span asp-validation-for="Worktime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Labor" class="control-label"></label>
+                <input asp-for="Labor" class="form-control" />
+                <span asp-validation-for="Labor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAcquired" class="control-label"></label>
+                <input asp-for="DateAcquired" class="form-control" />
+                <span asp-validation-for="DateAcquired" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
